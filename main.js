@@ -4,9 +4,11 @@ var roleBuilder = require('role.builder');
 
 module.exports.loop = function () {
 
+    var nbHarvester = 1;
     var harvester = 0;
     var upgrader = 0;
     var builder = 0;
+
     /*var tower = Game.getObjectById('TOWER_ID');
     if(tower) {
         var closestDamagedStructure = tower.pos.findClosestByRange(FIND_STRUCTURES, {
@@ -38,5 +40,8 @@ module.exports.loop = function () {
             builder += 1;
         }
     }
-    
+    if (harvester < nbHarvester) {
+        Game.spawns["Spawn1"].createCreep([MOVE, CARRY, WORK, WORK], undefined, {role:"harvester"});
+    }
+
 }
