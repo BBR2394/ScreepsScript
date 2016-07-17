@@ -30,18 +30,22 @@ module.exports.loop = function () {
         var creep = Game.creeps[name];
 
         if(creep.memory.role == 'harvester') {
+            creep.say("harvester !");
             roleHarvester.run(creep);
             harvester += 1;
         }
         if(creep.memory.role == 'upgrader') {
+            creep.say("upgarder !");
             roleUpgrader.run(creep);
             upgrader += 1;
         }
         if(creep.memory.role == 'builder') {
+            creep.say("builder !");
             roleBuilder.run(creep);
             builder += 1;
         }
     }
+
     if (harvester < nbHarvester) {
         Game.spawns["Spawn1"].createCreep([MOVE, CARRY, WORK, WORK], undefined, {role:"harvester"});
     }
