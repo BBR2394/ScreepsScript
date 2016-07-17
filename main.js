@@ -4,7 +4,7 @@ var roleBuilder = require('role.builder');
 
 module.exports.loop = function () {
 
-    var nbHarvester = 2;
+    var nbHarvester = 3;
     var nbBuilder = 0;
     var nbUpgrader = 0;
     var harvester = 0;
@@ -51,5 +51,5 @@ module.exports.loop = function () {
     if (harvester < nbUpgrader) {
         Game.spawns["Spawn1"].createCreep([MOVE, CARRY, WORK, WORK], undefined, {role:"upgrader"});
     }
-    console.log("nb harvester : " + harvester +  "; nb builder : " + builder + "; nbupgrader : " + upgrader)
+    //console.log("nb harvester : " + harvester +  "; nb builder : " + builder + "; nbupgrader : " + upgrader)
 }
