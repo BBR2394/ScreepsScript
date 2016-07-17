@@ -4,6 +4,9 @@ var roleBuilder = require('role.builder');
 
 module.exports.loop = function () {
 
+    var harvester = 0;
+    var upgrader = 0;
+    var builder = 0;
     /*var tower = Game.getObjectById('TOWER_ID');
     if(tower) {
         var closestDamagedStructure = tower.pos.findClosestByRange(FIND_STRUCTURES, {
@@ -21,14 +24,19 @@ module.exports.loop = function () {
 
     for(var name in Game.creeps) {
         var creep = Game.creeps[name];
+
         if(creep.memory.role == 'harvester') {
             roleHarvester.run(creep);
+            harvester += 1;
         }
         if(creep.memory.role == 'upgrader') {
             roleUpgrader.run(creep);
+            upgrader += 1;
         }
         if(creep.memory.role == 'builder') {
             roleBuilder.run(creep);
+            builder += 1;
         }
     }
+    
 }
