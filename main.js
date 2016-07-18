@@ -6,7 +6,7 @@ module.exports.loop = function () {
 
     var nbHarvester = 2;
     var nbBuilder = 2;
-    var nbUpgrader = 3;
+    var nbUpgrader = 4;
     var harvester = 0;
     var upgrader = 0;
     var builder = 0;
