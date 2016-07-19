@@ -30,21 +30,21 @@ module.exports.loop = function () {
         var creep = Game.creeps[name];
 
         if(creep.memory.role == 'harvester') {
-            if (Game.time % 10 == 0) {
+            if (Game.time % 5 == 0) {
             creep.say("harvester !");
         }
             roleHarvester.run(creep);
             harvester += 1;
         }
         if(creep.memory.role == 'upgrader') {
-            if (Game.time % 10 == 0) {
+            if (Game.time % 5 == 0) {
             creep.say("upgarder !");
         }
             roleUpgrader.run(creep);
             upgrader += 1;
         }
         if(creep.memory.role == 'builder') {
-            if (Game.time % 10 == 0) {
+            if (Game.time % 5 == 0) {
             creep.say("builder !");
         }
             roleBuilder.run(creep);
@@ -82,3 +82,4 @@ module.exports.loop = function () {
     console.log(Game.time);
     console.log("nb harvester : " + harvester +  "; nb builder : " + builder + "; nbupgrader : " + upgrader)
 }
+
