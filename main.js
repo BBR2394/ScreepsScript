@@ -47,13 +47,31 @@ module.exports.loop = function () {
     }
 
     if (harvester < nbHarvester) {
-        Game.spawns["Spawn1"].createCreep([MOVE, CARRY, WORK, WORK], undefined, {role:"harvester"});
+        var result = Game.spawns["Spawn1"].createCreep([MOVE, CARRY, WORK, WORK], undefined, {role:"harvester"});
+        if(_.isString(result)) {
+            console.log('The name is: '+ result);
+        }
+        else {
+            console.log('Spawn error: '+ result);
+        }
     }
     if (builder < nbBuilder) {
-        Game.spawns["Spawn1"].createCreep([MOVE, CARRY, WORK, WORK], undefined, {role:"builder"});
+        var result = Game.spawns["Spawn1"].createCreep([MOVE, CARRY, WORK, WORK], undefined, {role:"builder"});
+        if(_.isString(result)) {
+            console.log('The name is: '+ result);
+        }
+        else {
+            console.log('Spawn error: '+ result);
+        }
     }
     if (upgrader < nbUpgrader) {
-        Game.spawns["Spawn1"].createCreep([MOVE, WORK, CARRY, CARRY, WORK], undefined, {role:"upgrader"});
+        var result = Game.spawns["Spawn1"].createCreep([MOVE, WORK, CARRY, CARRY, WORK], undefined, {role:"upgrader"});
+        if(_.isString(result)) {
+            console.log('The name is: '+ result);
+        }
+        else {
+            console.log('Spawn error: '+ result);
+        }
     }
     //console.log("nb harvester : " + harvester +  "; nb builder : " + builder + "; nbupgrader : " + upgrader)
 }
