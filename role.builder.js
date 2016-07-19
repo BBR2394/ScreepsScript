@@ -22,8 +22,8 @@ var roleBuilder = {
             var source = creep.pos.findClosestByRange(FIND_SOURCES);
             var allSources = creep.room.find(FIND_SOURCES)
 
-            if(creep.harvest(allSources[1]) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(allSources[1]);
+            if(creep.harvest(allSources[0]) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(allSources[0]);
             }
         }
     }
