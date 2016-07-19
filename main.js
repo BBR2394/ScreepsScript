@@ -65,7 +65,7 @@ module.exports.loop = function () {
         }
     }
     if (upgrader < nbUpgrader) {
-        var result = Game.spawns["Spawn1"].createCreep([MOVE, WORK, CARRY, CARRY, WORK], undefined, {role:"upgrader"});
+        var result = Game.spawns["Spawn1"].createCreep([MOVE, WORK, CARRY, CARRY], undefined, {role:"upgrader"});
         if(_.isString(result)) {
             console.log('The name is: '+ result);
         }
