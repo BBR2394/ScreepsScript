@@ -52,7 +52,7 @@ module.exports.loop = function () {
             console.log('The name is: '+ result);
         }
         else {
-            console.log('Spawn error: '+ result);
+            console.log('Spawn error harverster: '+ result);
         }
     }
     if (builder < nbBuilder) {
@@ -61,7 +61,7 @@ module.exports.loop = function () {
             console.log('The name is: '+ result);
         }
         else {
-            console.log('Spawn error: '+ result);
+            console.log('Spawn error builder: '+ result);
         }
     }
     if (upgrader < nbUpgrader) {
@@ -70,7 +70,7 @@ module.exports.loop = function () {
             console.log('The name is: '+ result);
         }
         else {
-            console.log('Spawn error: '+ result);
+            console.log('Spawn error upgrader: '+ result);
         }
     }
     //console.log("nb harvester : " + harvester +  "; nb builder : " + builder + "; nbupgrader : " + upgrader)
