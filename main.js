@@ -53,7 +53,7 @@ module.exports.loop = function () {
         Game.spawns["Spawn1"].createCreep([MOVE, CARRY, WORK, WORK], undefined, {role:"builder"});
     }
     if (upgrader < nbUpgrader) {
-        Game.spawns["Spawn1"].createCreep([MOVE, MOVE, CARRY, CARRY, WORK], undefined, {role:"upgrader"});
+        Game.spawns["Spawn1"].createCreep([MOVE, WORK, CARRY, CARRY, WORK], undefined, {role:"upgrader"});
     }
     //console.log("nb harvester : " + harvester +  "; nb builder : " + builder + "; nbupgrader : " + upgrader)
 }
