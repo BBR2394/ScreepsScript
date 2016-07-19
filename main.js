@@ -57,28 +57,28 @@ module.exports.loop = function () {
         if(_.isString(result)) {
             console.log('The name is: '+ result + "i am a harvester");
         }
-        /*else {
+        else {
             console.log('Spawn error harverster: '+ result);
-        }*/
+        }
     }
     if (builder < nbBuilder) {
         var result = Game.spawns["Spawn1"].createCreep([MOVE, CARRY, WORK, WORK], undefined, {role:"builder"});
         if(_.isString(result)) {
             console.log('The name is: '+ result + "i am a builder");
         }
-        /*else {
+        else {
             console.log('Spawn error builder: '+ result);
-        }*/
+        }
     }
     if (upgrader < nbUpgrader) {
-        var result = Game.spawns["Spawn1"].createCreep([MOVE, WORK, CARRY, CARRY], undefined, {role:"upgrader"});
+        var result = Game.spawns["Spawn1"].createCreep([MOVE, WORK, WORK, CARRY, CARRY], undefined, {role:"upgrader"});
         if(_.isString(result)) {
             console.log('The name is: '+ result + "i am a upgrader");
         }
-        /*else {
+        else {
             console.log('Spawn error upgrader: '+ result);
-        }*/
+        }
     }
     console.log(Game.time);
-    //console.log("nb harvester : " + harvester +  "; nb builder : " + builder + "; nbupgrader : " + upgrader)
+    console.log("nb harvester : " + harvester +  "; nb builder : " + builder + "; nbupgrader : " + upgrader)
 }
