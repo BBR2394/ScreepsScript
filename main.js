@@ -4,7 +4,7 @@ var roleBuilder = require('role.builder');
 
 module.exports.loop = function () {
 
-    var nbHarvester = 3;
+    var nbHarvester = 5;
     var nbBuilder = 4;
     var nbUpgrader = 2;
     var harvester = 0;
