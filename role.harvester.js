@@ -2,7 +2,7 @@ var roleHarvester = {
 
     /** @param {Creep} creep **/
     run: function(creep) {
-
+        
         if (Game.spawns["Spawn1"].energy < Game.spawns["Spawn1"].energyCapacity) {
         if(creep.carry.energy < creep.carryCapacity) {
             var allSources = creep.room.find(FIND_SOURCES)

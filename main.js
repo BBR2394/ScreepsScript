@@ -73,5 +73,6 @@ module.exports.loop = function () {
             console.log('Spawn error upgrader: '+ result);
         }*/
     }
+    console.log(Game.time);
     //console.log("nb harvester : " + harvester +  "; nb builder : " + builder + "; nbupgrader : " + upgrader)
 }
