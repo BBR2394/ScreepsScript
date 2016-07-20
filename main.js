@@ -1,15 +1,18 @@
 var roleHarvester = require('role.harvester');
 var roleUpgrader = require('role.upgrader');
 var roleBuilder = require('role.builder');
+var roleAttacker = require('role.attacker');
 
 module.exports.loop = function () {
 
-    var nbHarvester = 7;
-    var nbBuilder = 4;
-    var nbUpgrader = 5;
+    var nbHarvester = 0;
+    var nbBuilder = 0;
+    var nbUpgrader = 0;
+    var nbAttacker = 0;
     var harvester = 0;
     var upgrader = 0;
     var builder = 0;
+    var attacker = 0;
 
     /*var tower = Game.getObjectById('TOWER_ID');
     if(tower) {
@@ -50,6 +53,15 @@ module.exports.loop = function () {
             roleBuilder.run(creep);
             builder += 1;
         }
+
+        if(creep.memory.role == 'attacker') {
+            if (Game.time % 1 == 0) {
+            creep.say("soldat !");
+        }
+            roleAttacker.run(creep);
+            attacker += 1;
+        }
+
     }
 
     if (harvester < nbHarvester) {
@@ -79,6 +91,17 @@ module.exports.loop = function () {
             console.log('Spawn error upgrader: '+ result);
         }
     }
+
+    if (attacker < nbAttacker) {
+        var result = Game.spawns["Spawn1"].createCreep([MOVE, MOVE, ATTACK, ATTACK], undefined, {role:"upgrader"});
+        if(_.isString(result)) {
+            console.log('The name is: '+ result + "i am a soldier");
+        }
+        else {
+            console.log('Spawn error upgrader: '+ result);
+        }
+    }
+
     console.log(Game.time);
     console.log("nb harvester : " + harvester +  "; nb builder : " + builder + "; nbupgrader : " + upgrader)
 }
