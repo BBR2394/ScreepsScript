@@ -73,8 +73,8 @@ module.exports.loop = function () {
             console.log('Spawn error harverster: '+ result);
         }
     }
-    if (builder < nbBuilder) {
-        var result = Game.spawns["Spawn1"].createCreep([MOVE, CARRY, WORK, WORK], undefined, {role:"builder"});
+    if (builder < nbBuilder) {//[MOVE, CARRY, WORK, WORK]
+        var result = Game.spawns["Spawn1"].createCreep([MOVE], undefined, {role:"builder"});
         if(_.isString(result)) {
             console.log('The name is: '+ result + "i am a builder");
         }
