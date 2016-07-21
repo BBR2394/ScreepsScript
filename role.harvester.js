@@ -9,8 +9,8 @@ var roleHarvester = {
             var source = creep.pos.findClosestByRange(FIND_SOURCES);
             //console.log(allSources);
             //console.log(source);
-            if(creep.harvest(allSources[0]) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(allSources[0]);
+            if(creep.harvest(source) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(source);
             }
         }
         else {
