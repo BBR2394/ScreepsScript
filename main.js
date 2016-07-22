@@ -7,7 +7,7 @@ module.exports.loop = function () {
 
     var nbHarvester = 2;
     var nbBuilder = 3;
-    var nbUpgrader = 1;
+    var nbUpgrader = 2;
     var nbAttacker = 0;
     var harvester = 0;
     var upgrader = 0;
@@ -88,7 +88,7 @@ module.exports.loop = function () {
         }
     }
     if (upgrader < nbUpgrader) {
-        var result = Game.spawns["Spawn1"].createCreep([MOVE, WORK, CARRY, CARRY], undefined, {role:"upgrader"});
+        var result = Game.spawns["Spawn1"].createCreep([MOVE, WORK, WORK, CARRY, CARRY], undefined, {role:"upgrader"});
         if(_.isString(result)) {
             console.log('The name is: '+ result + "i am a upgrader");
         }
