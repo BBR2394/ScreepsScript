@@ -23,18 +23,18 @@ var roleHarvester = {
             }
             console.log("acreep")
             console.log(aCreep)
-            if (aCreep == true) {
+            /*if (aCreep == true && ) {
 
-                creep.moveTo(29,11)
+                //creep.moveTo(29,11)
             }
             else {
                 if(creep.harvest(allSources[0]) == ERR_NOT_IN_RANGE) {
                     creep.moveTo(allSources[0]);
                 }
-            }
-            /*if(creep.harvest(allSources[0]) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(allSources[0]);
             }*/
+            if(creep.harvest(allSources[0]) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(allSources[0]);
+            }
             state = "empty"
         }
         else {
