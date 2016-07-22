@@ -14,6 +14,9 @@ var roleHarvester = {
             var look = creep.room.lookAt(26, 11);
             console.log('jaffiche look');
             console.log(look)
+            for (var c = 0, c < look.length, c++) {
+                console.log(look[c]);
+            }
             
 
             if(creep.harvest(allSources[0]) == ERR_NOT_IN_RANGE) {
