@@ -35,6 +35,11 @@ var roleHarvester = {
             }*/
             state = "empty"
         }
+        else if ((creep.carry.energy == creep.carryCapacity) && ((structure.structureType == STRUCTURE_EXTENSION ||
+                                                                    structure.structureType == STRUCTURE_SPAWN ||
+                                                                    structure.structureType == STRUCTURE_TOWER) && structure.energy < structure.energyCapacity)){
+            creep.moveTo(28, 16);
+        }
         else {
 
             var targets = creep.room.find(FIND_STRUCTURES, {
