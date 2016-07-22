@@ -14,7 +14,7 @@ var roleHarvester = {
             var look = creep.room.lookAt(26, 11);
             console.log('jaffiche look');
             console.log(look)
-            for (var c = 0, c < look.length, c++) {
+            for (var c = 0; c < look.length; c++) {
                 console.log(look[c]);
             }
             
