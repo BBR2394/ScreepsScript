@@ -65,7 +65,7 @@ module.exports.loop = function () {
     }
 
     if (harvester < nbHarvester) {
-        var result = Game.spawns["Spawn1"].createCreep([MOVE, MOVE, CARRY, CARRY, WORK], undefined, {role:"harvester"});
+        var result = Game.spawns["Spawn1"].createCreep([MOVE, MOVE, CARRY, CARRY, WORK, WORK], undefined, {role:"harvester"});
         if(_.isString(result)) {
             console.log('The name is: '+ result + "i am a harvester");
         }
