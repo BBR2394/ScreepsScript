@@ -17,14 +17,14 @@ var roleHarvester = {
             var aCreep = false;
             for (var c = 0; c < look.length; c++) {
                 console.log(look[c].type);
-                if (look[c].type == creep) {
+                if (look[c].type == "creep") {
                     aCreep = true;
                 }
             }
             console.log("acreep")
             console.log(aCreep)
             if (aCreep == true) {
-                
+
                 creep.moveTo(29,11)
             }
             else {
