@@ -21,8 +21,10 @@ var roleHarvester = {
                     aCreep = true;
                 }
             }
-
+            console.log("acreep")
+            console.log(aCreep)
             if (aCreep == true) {
+                
                 creep.moveTo(29,11)
             }
             else {
