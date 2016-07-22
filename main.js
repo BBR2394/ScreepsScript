@@ -5,9 +5,9 @@ var roleAttacker = require('role.attacker');
 
 module.exports.loop = function () {
 
-    var nbHarvester = 1;
-    var nbBuilder = 0;
-    var nbUpgrader = 0;
+    var nbHarvester = 2;
+    var nbBuilder = 1;
+    var nbUpgrader = 1;
     var nbAttacker = 0;
     var harvester = 0;
     var upgrader = 0;
