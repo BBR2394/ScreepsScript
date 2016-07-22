@@ -14,14 +14,25 @@ var roleHarvester = {
             var look = creep.room.lookAt(26, 11);
             console.log('jaffiche look');
             console.log(look)
+            var aCreep = false;
             for (var c = 0; c < look.length; c++) {
-                console.log(look[c]);
+                console.log(look[c].type);
+                if (look[c].type == creep) {
+                    aCreep = true;
+                }
             }
-            
 
-            if(creep.harvest(allSources[0]) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(allSources[0]);
+            if (aCreep == true) {
+                creep.moveTo(29,11)
             }
+            else {
+                if(creep.harvest(allSources[0]) == ERR_NOT_IN_RANGE) {
+                    creep.moveTo(allSources[0]);
+                }
+            }
+            /*if(creep.harvest(allSources[0]) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(allSources[0]);
+            }*/
             state = "empty"
         }
         else {
