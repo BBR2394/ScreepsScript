@@ -5,9 +5,9 @@ var roleAttacker = require('role.attacker');
 
 module.exports.loop = function () {
 
-    var nbHarvester = 2;
-    var nbBuilder = 1;
-    var nbUpgrader = 1;
+    var nbHarvester = 1;
+    var nbBuilder = 0;
+    var nbUpgrader = 0;
     var nbAttacker = 0;
     var harvester = 0;
     var upgrader = 0;
@@ -70,7 +70,7 @@ module.exports.loop = function () {
     }
 
     if (harvester < nbHarvester) {
-        var result = Game.spawns["Spawn1"].createCreep([MOVE, MOVE, CARRY, CARRY, WORK, WORK], undefined, {role:"harvester"});
+        var result = Game.spawns["Spawn1"].createCreep([MOVE, MOVE, CARRY, CARRY, WORK], undefined, {role:"harvester"});
         if(_.isString(result)) {
             console.log('The name is: '+ result + "i am a harvester");
         }
@@ -79,7 +79,7 @@ module.exports.loop = function () {
         }
     }
     if (builder < nbBuilder) {//[MOVE, CARRY, WORK, WORK]
-        var result = Game.spawns["Spawn1"].createCreep([MOVE, MOVE, CARRY, CARRY, WORK, WORK], undefined, {role:"builder"});
+        var result = Game.spawns["Spawn1"].createCreep([MOVE, MOVE, CARRY, CARRY, WORK], undefined, {role:"builder"});
         if(_.isString(result)) {
             console.log('The name is: '+ result + "i am a builder");
         }
@@ -88,7 +88,7 @@ module.exports.loop = function () {
         }
     }
     if (upgrader < nbUpgrader) {
-        var result = Game.spawns["Spawn1"].createCreep([MOVE, WORK, WORK, CARRY, CARRY], undefined, {role:"upgrader"});
+        var result = Game.spawns["Spawn1"].createCreep([MOVE, MOVE, WORK, CARRY, CARRY], undefined, {role:"upgrader"});
         if(_.isString(result)) {
             console.log('The name is: '+ result + "i am a upgrader");
         }
