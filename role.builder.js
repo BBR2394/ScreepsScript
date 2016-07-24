@@ -29,7 +29,7 @@ var roleBuilder = {
         }
 
         var targets = creep.room.find(FIND_MY_STRUCTURES);
-        creep.repair(target[7]);
+        creep.repair(targets[7]);
         console.log(targets)
         console.log("juste au dessus target");
     }
