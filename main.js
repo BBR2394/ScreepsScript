@@ -5,7 +5,7 @@ var roleAttacker = require('role.attacker');
 
 module.exports.loop = function () {
 
-    var nbHarvester = 3;
+    var nbHarvester = 6;
     var nbBuilder = 1;
     var nbUpgrader = 3;
     var nbAttacker = 0;
@@ -70,8 +70,8 @@ module.exports.loop = function () {
 
     }
 
-    if (harvester < nbHarvester) {
-        var result = Game.spawns["Spawn1"].createCreep([MOVE, MOVE, CARRY, CARRY, WORK], undefined, {role:"harvester"});
+    if (harvester < nbHarvester) {//[MOVE, MOVE, CARRY, CARRY, WORK, WORK, WORK, MOVE]
+        var result = Game.spawns["Spawn1"].createCreep([MOVE, MOVE, CARRY, CARRY, WORK, WORK, WORK, MOVE], undefined, {role:"harvester"});
         if(_.isString(result)) {
             console.log('The name is: '+ result + "i am a harvester");
         }
