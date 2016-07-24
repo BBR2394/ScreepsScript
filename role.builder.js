@@ -3,6 +3,7 @@ var roleBuilder = {
     /** @param {Creep} creep **/
     run: function(creep) {
 
+        var targets = creep.room.find(FIND_MY_STRUCTURES);
         if(creep.memory.building && creep.carry.energy == 0) {
             creep.memory.building = false;
         }
@@ -28,10 +29,10 @@ var roleBuilder = {
             }
         }
 
-        var targets = creep.room.find(FIND_MY_STRUCTURES);
-        creep.repair(targets[7]);
+        
+        /*creep.repair(targets[7]);
         console.log(targets)
-        console.log("juste au dessus target");
+        console.log("juste au dessus target");*/
     }
 };
 
