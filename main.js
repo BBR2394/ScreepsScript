@@ -16,7 +16,8 @@ module.exports.loop = function () {
 
     var bodyAccordingLevel = [  
                                 [MOVE, MOVE, CARRY, CARRY, WORK], 
-                                [MOVE, MOVE, CARRY, CARRY, WORK, WORK]
+                                [MOVE, MOVE, CARRY, CARRY, WORK, WORK],
+                                [MOVE, MOVE, CARRY, CARRY, WORK, WORK, WORK]
                              ];
 
     /*var tower = Game.getObjectById('TOWER_ID');
