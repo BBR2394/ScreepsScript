@@ -27,6 +27,10 @@ var roleBuilder = {
                 creep.moveTo(allSources[1]);
             }
         }
+
+        var targets = creep.room.find(FIND_CONSTRUCTION_SITES);
+        console.log(targets)
+        console.log("juste au dessus target");
     }
 };
 
