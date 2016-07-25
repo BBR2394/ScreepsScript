@@ -8,7 +8,7 @@ module.exports.loop = function () {
 
     var nbHarvester = 1;
     var nbBuilder = 3;
-    var nbUpgrader = 3;
+    var nbUpgrader = 2;
     var nbAttacker = 0;
     var harvester = 0;
     var upgrader = 0;
