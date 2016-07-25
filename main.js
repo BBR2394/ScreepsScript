@@ -8,7 +8,7 @@ module.exports.loop = function () {
     var nbHarvester = 3;
     var nbBuilder = 1;
     var nbUpgrader = 3;
-    var nbAttacker = 1;
+    var nbAttacker = 0;
     var harvester = 0;
     var upgrader = 0;
     var builder = 0;
@@ -98,15 +98,15 @@ module.exports.loop = function () {
         }
     }
 
-    if (attacker < nbAttacker) {
-        var result = Game.spawns["Spawn1"].createCreep([MOVE, MOVE, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK], undefined, {role:"upgrader"});
+    /*if (attacker < nbAttacker) {
+        var result = Game.spawns["Spawn1"].createCreep([MOVE, MOVE, RANGED_ATTACK, RANGED_ATTACK, RANGED_ATTACK], undefined, {role:"attacker"});
         if(_.isString(result)) {
             console.log('The name is: '+ result + "i am a soldier");
         }
         else {
-            console.log('Spawn error upgrader: '+ result);
+            console.log('Spawn error soldier: '+ result);
         }
-    }
+    }*/
 
     console.log(Game.time);
     console.log("nb harvester : " + harvester +  "; nb builder : " + builder + "; nbupgrader : " + upgrader)

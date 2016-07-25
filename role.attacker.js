@@ -3,7 +3,7 @@ var roleAttacker = {
     /** @param {Creep} creep **/
     run: function(creep) {
 
-        creep.moveTo(33, 17);
+        creep.moveTo(32, 19);
     }
 };
 
