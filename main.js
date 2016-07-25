@@ -1,6 +1,7 @@
 var roleHarvester = require('role.harvester');
 var roleUpgrader = require('role.upgrader');
 var roleBuilder = require('role.builder');
+var roleCustomBuilder = require('role.custombuilder');
 var roleAttacker = require('role.attacker');
 
 module.exports.loop = function () {
