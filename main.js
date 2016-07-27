@@ -7,7 +7,7 @@ var roleAttacker = require('role.attacker');
 module.exports.loop = function () {
 
     var nbHarvester = 2;
-    var nbBuilder = 3;
+    var nbBuilder = 5;
     var nbUpgrader = 2;
     var nbAttacker = 0;
     var harvester = 0;
@@ -16,9 +16,11 @@ module.exports.loop = function () {
     var attacker = 0;
 
     var bodyAccordingLevel = [  
-                                [MOVE, MOVE, CARRY, CARRY, WORK], 
-                                [MOVE, MOVE, CARRY, CARRY, WORK, WORK],
-                                [MOVE, MOVE, CARRY, CARRY, WORK, WORK, WORK]
+                                [MOVE, MOVE, CARRY, CARRY, WORK], //300
+                                [MOVE, MOVE, CARRY, CARRY, WORK, WORK], //400
+                                [MOVE, MOVE, CARRY, CARRY, CARRY, WORK, WORK], //450
+                                [MOVE, MOVE, CARRY, CARRY, WORK, WORK, WORK], //500
+                                [MOVE, MOVE, CARRY, CARRY, CARRY, WORK, WORK, WORK], //550
                              ];
 
     /*var tower = Game.getObjectById('TOWER_ID');
@@ -81,7 +83,7 @@ module.exports.loop = function () {
         }
     }
     if (builder < nbBuilder) {//[MOVE, CARRY, WORK, WORK]
-        var result = Game.spawns["Spawn1"].createCreep([MOVE, MOVE, CARRY, CARRY, WORK, WORK], undefined, {role:"builder"});
+        var result = Game.spawns["Spawn1"].createCreep([MOVE, MOVE, CARRY, CARRY, CARRY, WORK, WORK, WORK], undefined, {role:"builder"});
         if(_.isString(result)) {
             console.log('The name is: '+ result + "i am a builder");
         }
